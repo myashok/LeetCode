@@ -8,3 +8,4 @@
 |6|[ ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/)|[JavaScript](./solutions/6.%20ZigZag%20Conversion.js)|120 ms|
 |11|[ Container With Most Water](https://leetcode.com/problems/container-with-most-water/)|[JavaScript](./solutions/11.%20Container%20With%20Most%20Water.js)|96 ms|
 |15|[ 3Sum](https://leetcode.com/problems/3sum/)|[JavaScript](./solutions/15.%203Sum.js)|140 ms|
+|16|[ 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[JavaScript](./solutions/16.%203Sum%20Closest.js)|80 ms|
