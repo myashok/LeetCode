@@ -10,4 +10,4 @@
 |15|[ 3Sum](https://leetcode.com/problems/3sum/)|[JavaScript](./solutions/15.%203Sum.js)|140 ms|
 |16|[ 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[JavaScript](./solutions/16.%203Sum%20Closest.js)|80 ms|
 |41|[ First Missing Positive](https://leetcode.com/problems/first-missing-positive/)|[JavaScript](./solutions/41.%20First%20Missing%20Positive.js)|80 ms|
-|42|[ Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)|[JavaScript](./solutions/42.%20Trapping%20Rain%20Water.js)||
+|42|[ Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)|[JavaScript](./solutions/42.%20Trapping%20Rain%20Water.js)|96 ms|
