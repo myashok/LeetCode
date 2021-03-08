@@ -9,11 +9,14 @@ var trap = function(height) {
     let j = height.length - 1;
     let ans = 0;
     while (i < j) {
-        if (height[i] < height[j]) {
-            height[i] >= leftMax ? leftMax = height[i]: ans += (leftMax - height[i])
+        height[i] >= leftMax ? leftMax = height[i]: leftMax = leftMax; 
+        height[j] >= rightMax ? rightMax = height[j]: rightMax = rightMax; 
+        
+        if (leftMax < rightMax) {
+            ans += height[i] >= leftMax ? 0: (leftMax - height[i])
             i++;
         } else {
-            height[j] >= rightMax ? rightMax = height[j]: ans += (rightMax - height[j])
+             ans += height[j] >= rightMax ? 0: (rightMax - height[j])
             j--;
         }
     }
