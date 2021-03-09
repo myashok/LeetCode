@@ -9,5 +9,6 @@
 |11|[ Container With Most Water](https://leetcode.com/problems/container-with-most-water/)|[JavaScript](./solutions/11.%20Container%20With%20Most%20Water.js)|96 ms|
 |15|[ 3Sum](https://leetcode.com/problems/3sum/)|[JavaScript](./solutions/15.%203Sum.js)|140 ms|
 |16|[ 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[JavaScript](./solutions/16.%203Sum%20Closest.js)|80 ms|
+|17|[ Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)|[JavaScript](./solutions/17.%20Letter%20Combinations%20of%20a%20Phone%20Number.js)|72 ms|
 |41|[ First Missing Positive](https://leetcode.com/problems/first-missing-positive/)|[JavaScript](./solutions/41.%20First%20Missing%20Positive.js)|80 ms|
 |42|[ Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)|[JavaScript](./solutions/42.%20Trapping%20Rain%20Water.js)|96 ms|
