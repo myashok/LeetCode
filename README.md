@@ -18,6 +18,7 @@
 |94|[ Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|[C++](./solutions/94.%20Binary%20Tree%20Inorder%20Traversal.cpp)|3 ms|
 |102|[ Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)|[C++](./solutions/102.%20Binary%20Tree%20Level%20Order%20Traversal.cpp)|6 ms|
 |107|[ Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[C++](./solutions/107.%20Binary%20Tree%20Level%20Order%20Traversal%20II.cpp)|7 ms|
+|121|[ Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[C++](./solutions/121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.cpp)|6 ms|
 |140|[ Word Break II](https://leetcode.com/problems/word-break-ii/)|[C++](./solutions/140.%20Word%20Break%20II.cpp)|12 ms|
 |312|[ Burst Balloons](https://leetcode.com/problems/burst-balloons/)|[C++](./solutions/312.%20Burst%20Balloons.cpp)|469 ms|
 |347|[ Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)|[C++](./solutions/347.%20Top%20K%20Frequent%20Elements.cpp)|22 ms|
