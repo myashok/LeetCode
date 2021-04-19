@@ -23,6 +23,7 @@
 |472|[ Concatenated Words](https://leetcode.com/problems/concatenated-words/)|[C++](./solutions/472.%20Concatenated%20Words.cpp)|298 ms|
 |474|[ Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/)|[C++](./solutions/474.%20Ones%20and%20Zeroes.cpp)|49 ms|
 |523|[ Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)|[C++](./solutions/523.%20Continuous%20Subarray%20Sum.cpp)|N/A|
+|546|[ Remove Boxes](https://leetcode.com/problems/remove-boxes/)|[Java](./solutions/546.%20Remove%20Boxes.java)|143 ms|
 |552|[ Student Attendance Record II](https://leetcode.com/problems/student-attendance-record-ii/)|[C++](./solutions/552.%20Student%20Attendance%20Record%20II.cpp)|145 ms|
 |583|[ Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/)|[C++](./solutions/583.%20Delete%20Operation%20for%20Two%20Strings.cpp)|29 ms|
 |637|[ Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)|[C++](./solutions/637.%20Average%20of%20Levels%20in%20Binary%20Tree.cpp)|18 ms|
