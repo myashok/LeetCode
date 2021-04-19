@@ -15,5 +15,6 @@
 |41|[ First Missing Positive](https://leetcode.com/problems/first-missing-positive/)|[JavaScript](./solutions/41.%20First%20Missing%20Positive.js)|80 ms|
 |42|[ Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)|[JavaScript](./solutions/42.%20Trapping%20Rain%20Water.js)|96 ms|
 |94|[ Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|[C++](./solutions/94.%20Binary%20Tree%20Inorder%20Traversal.cpp)|3 ms|
+|347|[ Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)|[C++](./solutions/347.%20Top%20K%20Frequent%20Elements.cpp)|22 ms|
 |454|[ 4Sum II](https://leetcode.com/problems/4sum-ii/)|[JavaScript](./solutions/454.%204Sum%20II.js)|416 ms|
 |1190|[ Reverse Substrings Between Each Pair of Parentheses](https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/)|[JavaScript](./solutions/1190.%20Reverse%20Substrings%20Between%20Each%20Pair%20of%20Parentheses.js)|76 ms|
