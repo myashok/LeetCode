@@ -14,4 +14,4 @@ class Solution:
         X = max(coor[0] for coor in corners)
         Y = max(coor[1] for coor in corners)
 
-        return area == a()    
+        return area == a() and corners == c()     
