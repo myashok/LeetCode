@@ -1,10 +1,9 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        n = len(nums)
-        dp = [0] * n
-        dp[0] = nums[0]
-        for index in range(1, n):
-            dp[index] = max(dp[index-1], (dp[index-2] if index - 2 >= 0 else 0) + nums[index])
-        
-        return dp[n-1]   
-        
+        ans = prev_result = prev_prev_result = 0
+        for num in nums:
+            ans = max(prev_result, num+prev_prev_result)
+            prev_prev_result = prev_result
+            prev_result = ans
+            
+        return ans
