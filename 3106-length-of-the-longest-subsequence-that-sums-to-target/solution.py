@@ -1,9 +1,12 @@
 class Solution:
     def lengthOfLongestSubsequence(self, nums: List[int], target: int) -> int:
-        dp = [-math.inf] * (target + 1)
-        dp[0] = 0
+        dp = {0: 0}
         for num in nums:
-            for i in range(target, num - 1, -1):
-                dp[i] = max(dp[i], dp[i - num] + 1)
-        return dp[target] if dp[target] != -math.inf else -1
-                
+            new_dp = {}
+            for sum_num, len_sub in dp.items():
+                sum_num += num 
+                if sum_num <= target:
+                    if sum_num not in dp or len_sub >= dp[sum_num]:
+                        new_dp[sum_num] = len_sub + 1
+            dp |= new_dp
+        return dp.get(target, -1)
