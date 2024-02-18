@@ -1,33 +1,27 @@
-class Solution:
-    def minimumSemesters(self, N: int, relations: List[List[int]]) -> int:
-        graph = {i: [] for i in range(1, N + 1)}
-        for start_node, end_node in relations:
-            graph[start_node].append(end_node)
+from collections import defaultdict, deque
+from typing import List
 
-        # check if the graph contains a cycle
-        visited = {}
-        def dfs_max_path(node: int) -> int:
-            # return the longest path (inclusive)
-            if node in visited:
-                return visited[node]
-            
-            visited[node] = -1
-            max_length = 1
-            for end_node in graph[node]:
-                length = dfs_max_path(end_node)
-                if length == -1:
-                    return -1
-                max_length = max(length+1, max_length)
-            
-            # store it
-            visited[node] = max_length
-            return max_length
+class Solution:
+    def minimumSemesters(self, n: int, relations: List[List[int]]) -> int:
+        g = defaultdict(list)
+        in_degree = [0] * (n + 1)
+        for rel in relations:
+            u, v = rel
+            g[u].append(v)
+            in_degree[v] += 1
         
-        ans = 0
-        for node in graph.keys():
-            length = dfs_max_path(node)
-            if length == -1:
-                return -1
-            else:
-                ans = max(ans, length)
-        return ans
+        def bfs():
+            queue = deque([i for i in range(1, n + 1) if in_degree[i] == 0])
+            semester = course_taken = 0
+            while queue:
+                semester += 1
+                for _ in range(len(queue)):
+                    u = queue.popleft()
+                    course_taken += 1
+                    for v in g[u]:
+                        in_degree[v] -= 1
+                        if in_degree[v] == 0:
+                            queue.append(v)
+            return semester if course_taken == n else -1
+            
+        return bfs()
