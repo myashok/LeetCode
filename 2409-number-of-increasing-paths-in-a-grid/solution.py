@@ -25,5 +25,6 @@ class Solution:
                         temp += max_path_val[new_row][new_col]
                 ans += temp
                 max_path_val[row][col] = temp
-            ans %= (mod)
+                ans %= (mod)
+                
         return ans % (mod)
