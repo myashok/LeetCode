@@ -1,20 +1,18 @@
 class Solution:
     def jump(self, nums: List[int]) -> int:
-        can_jump_upto = nums[0] + 0
-        ans = 0
-        i = 0
+        ans = i = 0
         n = len(nums)
-        max_jump_index = 0
-        while i < n:
-            if i > can_jump_upto:
-                i = max_jump_index
-                max_jump_index = 0
-                ans += 1
-                can_jump_upto = i + nums[i]
+        if n == 1:
+            return 0
 
-            if i + nums[i] > max_jump_index + nums[max_jump_index]:
-                max_jump_index = i
-
-            i += 1
-        return ans if n == 1 else ans + 1
+        while True:
+            if nums[i] + i >= n - 1:
+                return ans + 1
+                
+            max_jump_index = i + 1
+            for j in range(i + 2, i + nums[i] + 1):
+                if nums[j] - (i - j + 1) > nums[max_jump_index] - (i - max_jump_index + 1):
+                    max_jump_index = j
+            ans += 1
+            i = max_jump_index
 
