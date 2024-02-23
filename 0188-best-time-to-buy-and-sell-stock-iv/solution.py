@@ -1,12 +1,16 @@
 class Solution:
     def maxProfit(self, k: int, prices: List[int]) -> int:
-        dp = [0]*(k+1)
-        mn = [prices[0]]*(k+1)
         n = len(prices)
-        for i in range(n):
-            for j in range(1,k+1):
-                mn[j] = min(mn[j], prices[i] - dp[j-1])
-                dp[j] = max(dp[j], prices[i] - mn[j])
-        
-        return dp[k]
+        @lru_cache(maxsize=None)
+        def solve(pos, t, is_bought):
+            if pos >= n or t == 0:
+               return 0
+            result = solve(pos + 1, t, is_bought)
+            if is_bought:
+                result = max(result, solve(pos + 1, t - 1, False) + prices[pos])
+            else:
+                result = max(result, solve(pos + 1, t, True) - prices[pos])
+            return result
+        return solve(0, k, False)
+            
 
