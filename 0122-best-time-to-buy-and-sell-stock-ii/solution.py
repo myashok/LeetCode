@@ -1,7 +1,13 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
+        buy = 0
+        sell = 1
         ans = 0
-        days = len(prices)
-        for i in range(1, days):
-            ans += 0 if prices[i] <= prices[i-1] else prices[i] - prices[i-1]
+        for sell in range(1, len(prices)):
+            if prices[sell] > prices[buy]:
+                ans += prices[sell] - prices[buy]
+                buy = sell
+            else:
+                buy = sell
         return ans
+
