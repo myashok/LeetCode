@@ -5,5 +5,6 @@ class Solution:
         for price in prices:
             if price > prev_min:
                 ans = max(price-prev_min, ans)
-            prev_min = min(prev_min, price)
+            else:
+                prev_min = price
         return ans
