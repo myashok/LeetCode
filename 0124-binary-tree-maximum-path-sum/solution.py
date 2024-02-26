@@ -8,21 +8,16 @@ class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
         def get_max_path(root):
             if not root:
-                return -math.inf, -math.inf
-            left_max, lheight_max = get_max_path(root.left)
-            right_max, rheight_max = get_max_path(root.right)
-            lh_max = 0
-            rh_max = 0
-            if lheight_max != -math.inf:
-                lh_max = lheight_max
-            if rheight_max != -math.inf:
-                rh_max = rheight_max
-
-            return max(left_max, right_max, lh_max + rh_max + root.val, root.val, lh_max + root.val, rh_max + root.val), (
-                max(lh_max + root.val, root.val)
-                if lheight_max > rheight_max
-                else  max(rh_max + root.val, root.val)
-            )
+                return -math.inf, 0
+            left_max, lmax_gain = get_max_path(root.left)
+            right_max, rmax_gain = get_max_path(root.right)
+            lmax_gain = max(0, lmax_gain)
+            rmax_gain = max(0, rmax_gain)
+            return max(
+                left_max,
+                right_max,
+                lmax_gain + rmax_gain + root.val,
+            ), (lmax_gain + root.val if lmax_gain > rmax_gain else rmax_gain + root.val)
 
         return get_max_path(root)[0]
 
