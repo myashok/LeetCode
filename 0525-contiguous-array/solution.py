@@ -6,7 +6,6 @@ class Solution:
         mp[0] = -1
         for index, num in enumerate(nums):
             sum += -1 if num == 0 else 1
-            # print(sum, mp)
             if sum in mp:
                 ans = max(ans, index - mp[sum])
             else:
