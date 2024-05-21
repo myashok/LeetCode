@@ -2,6 +2,7 @@ class Solution:
     def validPalindrome(self, s: str) -> bool:
         if s == s[::-1]: 
             return True
+            
         def can_b_valid_palin(i, j, deleted):
             if deleted > 1:
                 return False
