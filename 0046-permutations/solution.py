@@ -1,17 +1,17 @@
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        ans = []
-        n = len(nums)
-        def compute(curr_list, used):
-            if len(curr_list) == n:
-                ans.append(curr_list[:])
-                return
-            for i, num in enumerate(nums):
-                if not used[i]:
-                    used[i] = True
-                    curr_list.append(num)
-                    compute(curr_list, used)
-                    used[i] = False
-                    curr_list.pop()
-        compute([], [False]*n)
-        return ans
+        def find_permutations(nums):
+            if len(nums) == 0:
+                return [[]]
+
+            permutations = []
+
+            for i in range(len(nums)):
+                num = nums[i]
+                remaining_nums = nums[:i] + nums[i+1:]
+                for perm in find_permutations(remaining_nums):
+                    permutations.append([num] + perm)
+                    
+            return permutations
+    
+        return find_permutations(nums)
