@@ -1,16 +1,13 @@
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        wordSet = set(wordDict)
+        n = len(s)
+        dp = [0]*(n + 1)
+        dp[0] = True
+        for i in range(1, n + 1):
+            for w in wordDict:
+                if len(w) <= i and s[i-len(w):i] == w and dp[i-len(w)]:
+                    dp[i]  = True
+                    break
+        return dp[len(s)]
         
-        @lru_cache(None)
-        def solve(start):
-            if start >= len(s):
-                return True
-            for i in range(start, len(s)):
-                if s[start:i+1] in wordSet:
-                    if solve(i + 1):
-                        return True
-            return False
-
-        return solve(0)
-        
+       
