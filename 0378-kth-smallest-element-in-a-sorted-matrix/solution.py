@@ -11,7 +11,7 @@ class Solution:
                     row += 1
                 else:
                     col -= 1
-            return cnt > k - 1
+            return cnt >= k
 
         while l < h:
             mid = (l + h) // 2
