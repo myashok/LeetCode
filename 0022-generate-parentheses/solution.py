@@ -3,20 +3,20 @@ from functools import lru_cache
 
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        list = []
         max_len = 2*n
-        
-        # @lru_cache(None)
-        def helper(s, open, close):
-            if len(s) == max_len:
-                list.append(s)
-                return    
-            
+        ans = []
+        def solve(curr_path, open, close):
+            if len(curr_path) == max_len:
+                ans.append("".join(curr_path[:]))
+                return
             if open < n:
-                helper(s + "(", open + 1, close)
-            if close < open:
-                helper(s + ")", open, close + 1)
-  
-        helper("", 0, 0)
-        return list         
-            
+                curr_path.append('(')
+                solve(curr_path, open + 1, close)
+                curr_path.pop()
+            if open > close:
+                curr_path.append(')')
+                solve(curr_path, open, close + 1)
+                curr_path.pop()
+        solve([], 0, 0)
+        return ans
+
