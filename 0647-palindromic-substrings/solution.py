@@ -1,22 +1,19 @@
 class Solution:
     def countSubstrings(self, s: str) -> int:
+        def expandAroundCenter(left: int, right: int) -> int:
+            count = 0
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                count += 1
+                left -= 1
+                right += 1
+            return count
+        
         n = len(s)
-        dp =[[False] * n for _ in range(n)]
-        ans = n
+        count = 0
+        
         for i in range(n):
-            dp[i][i] = True
-        if n > 1:
-            for i in range(n-1):
-                dp[i][i+1] = s[i] == s[i+1]
-                ans += s[i] == s[i+1]
-
-        for l in range(3, n+1):
-            for i in range(0, n - l + 1):
-                j = i + l - 1
-                if s[i] == s[j] and dp[i+1][j-1]:
-                    dp[i][j] = True
-                    ans += 1
-        return ans
-
-
+            count += expandAroundCenter(i, i)
+            count += expandAroundCenter(i, i + 1)
+        
+        return count
 
