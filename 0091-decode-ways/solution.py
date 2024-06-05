@@ -3,7 +3,7 @@ class Solution:
         
         @cache
         def calculate(s, i):
-            if i >= len(s):
+            if i == len(s):
                 return 1
             if s[i] == '0':
                 return 0
