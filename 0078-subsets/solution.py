@@ -2,7 +2,7 @@ class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         res = []
         def dfs(i, subset):
-            if i >= len(nums):
+            if i == len(nums):
                 res.append(subset[:])
                 return
             # decision to include nums[i]
