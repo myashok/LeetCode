@@ -1,6 +1,6 @@
 class Solution:
     def minEatingSpeed(self, piles: List[int], r: int) -> int:
-        l, h = 1, max(piles)
+        l, h = ceil(sum(piles)/r), max(piles)
         
         def _is_this_capacity_possibile(k: int) -> bool:
             hours = 0
